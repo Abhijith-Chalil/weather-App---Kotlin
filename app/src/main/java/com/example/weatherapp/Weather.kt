@@ -21,8 +21,7 @@ class Weather : AppCompatActivity() {
         weatherTask().execute()
 
     }
-//    val CITY: String = "kozhikode,in"
-    val APIKEY : String = "9226ef9e32286b070ec4b94ce1915ccb"
+    val APIKEY : String = "your apiKey"
 inner class weatherTask(): AsyncTask<String, Void, String>(){
 
     override fun onPreExecute() {
