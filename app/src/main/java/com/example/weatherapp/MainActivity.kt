@@ -19,7 +19,7 @@ import java.util.Locale
 class MainActivity : AppCompatActivity() {
 
     val CITY: String = "kozhikode,in"
-    val API : String = "9226ef9e32286b070ec4b94ce1915ccb"
+    val APIKEY : String = "past your apiKey here"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg params: String?): String? {
             var response: String?
             try {
-                response = URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API").readText(Charsets.UTF_8)
+                response = URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$APIKEY").readText(Charsets.UTF_8)
             } catch(e: Exception){
                 response = null
             }
