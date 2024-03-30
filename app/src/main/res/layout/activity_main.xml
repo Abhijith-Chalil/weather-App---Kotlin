@@ -31,6 +31,7 @@ tools:context=".MainActivity">
             android:hint="Enter City, Country code"
             android:textColorHint="@color/hintTextColor"
             android:background="@drawable/edit_text_border"
+            android:textColor="@color/white"
             android:layout_margin="20dp"
             android:padding="15dp"
             android:gravity="center"

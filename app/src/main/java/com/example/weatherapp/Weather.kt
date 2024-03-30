@@ -15,19 +15,14 @@ import java.util.Date
 import java.util.Locale
 
 class Weather : AppCompatActivity() {
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
         weatherTask().execute()
 
     }
-    val cityName = intent.getStringExtra("city")
 //    val CITY: String = "kozhikode,in"
-    val APIKEY : String = ""
+    val APIKEY : String = "9226ef9e32286b070ec4b94ce1915ccb"
 inner class weatherTask(): AsyncTask<String, Void, String>(){
 
     override fun onPreExecute() {
@@ -39,6 +34,7 @@ inner class weatherTask(): AsyncTask<String, Void, String>(){
 
     override fun doInBackground(vararg params: String?): String? {
         var response: String?
+        val cityName = intent.getStringExtra("city")
         try {
             response = URL("https://api.openweathermap.org/data/2.5/weather?q=$cityName&units=metric&appid=$APIKEY").readText(Charsets.UTF_8)
         } catch(e: Exception){
