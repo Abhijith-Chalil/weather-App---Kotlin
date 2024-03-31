@@ -13,8 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<Button>(R.id.getWeather).setOnClickListener(){
-            var city = findViewById<EditText>(R.id.cityEt).text.toString()
-            println(city)
+            val city = findViewById<EditText>(R.id.cityEt).text.toString()
             val intent = Intent(this, Weather::class.java)
             intent.putExtra("city", city)
             startActivity(intent)
